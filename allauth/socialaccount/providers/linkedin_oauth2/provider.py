@@ -61,6 +61,7 @@ class LinkedInOAuth2Provider(OAuth2Provider):
         scope = ['r_basicprofile']
         if app_settings.QUERY_EMAIL:
             scope.append('r_emailaddress')
+            scope.append('w_share')
         return scope
 
     def extract_common_fields(self, data):
